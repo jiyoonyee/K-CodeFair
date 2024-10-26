@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './pages/matchPage.dart';
-import './pages/mainPage.dart';// match_page 파일을 import
+import './pages/mainPage.dart';
+import './pages/voulenteerPage.dart';// match_page 파일을 import
 
 void main() {
   runApp(const MyApp());
@@ -55,7 +56,7 @@ class MyHomePage extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => MatchPage()),
+                      MaterialPageRoute(builder: (context) => Voulenteerpage()),
                     );
                   },
                   child: Container(

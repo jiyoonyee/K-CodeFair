@@ -2,12 +2,12 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
-class Matchinputpage extends StatefulWidget {
+class Voulenteerpage extends StatefulWidget {
   @override
   _MatchInputPageState createState() => _MatchInputPageState();
 }
 
-class _MatchInputPageState extends State<Matchinputpage> {
+class _MatchInputPageState extends State<Voulenteerpage> {
   DateTime _focusedDay = DateTime.now();
   DateTime? _selectedDay;
 
@@ -97,7 +97,7 @@ class _MatchInputPageState extends State<Matchinputpage> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Text(
-                            "거주지역 : ",
+                            "E-mail : ",
                             style: TextStyle(
                                 fontSize: 30,
                                 color: Colors.white,
@@ -111,71 +111,63 @@ class _MatchInputPageState extends State<Matchinputpage> {
                               ),
                               decoration: InputDecoration(
                                 border: InputBorder.none,
-                                hintText: '거주지역을 입력해주세요',
+                                hintText: '이메일을 입력해주세요',
                               ),
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(height: 30),
-                      Text(
-                        "교육 가능 시간",
-                        textAlign: TextAlign.start,
-                        style: TextStyle(
-                            fontSize: 30,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      SizedBox(height: 10),
-                      Container(
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: TableCalendar(
-                          focusedDay: _focusedDay,
-                          firstDay: DateTime.utc(2000, 1, 1),
-                          lastDay: DateTime.utc(2100, 12, 31),
-                          calendarFormat: CalendarFormat.month,
-                          selectedDayPredicate: (day) {
-                            return isSameDay(_selectedDay, day);
-                          },
-                          onDaySelected: (selectedDay, focusedDay) {
-                            setState(() {
-                              _selectedDay = selectedDay;
-                              _focusedDay = focusedDay;
-                            });
-                          },
-                          headerStyle: HeaderStyle(
-                            formatButtonVisible: false,
-                            titleCentered: true,
+                      SizedBox(height: 20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text(
+                            "봉사지역 : ",
+                            style: TextStyle(
+                                fontSize: 30,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
                           ),
-                          calendarStyle: CalendarStyle(
-                            selectedDecoration: BoxDecoration(
-                              color: Colors.blue,
-                              shape: BoxShape.circle,
-                            ),
-                            todayDecoration: BoxDecoration(
-                              color: Colors.green,
-                              shape: BoxShape.circle,
+                          Expanded(
+                            child: TextField(
+                              style: TextStyle(
+                                fontSize: 30,
+                                color: Colors.white,
+                              ),
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: '봉사지역을 입력해주세요',
+                              ),
                             ),
                           ),
-                        ),
+                        ],
                       ),
-                      SizedBox(
-                        height: 20,
+                      SizedBox(height: 20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text(
+                            "봉사분야 : ",
+                            style: TextStyle(
+                                fontSize: 30,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          Expanded(
+                            child: TextField(
+                              style: TextStyle(
+                                fontSize: 30,
+                                color: Colors.white,
+                              ),
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: '봉사분야를 입력해주세요',
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-                      Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            ElevatedButton(onPressed: (){}, child:
-                            Text("선택완료")
-                            )
-                          ],
-                        ),
-                      )
+
                     ],
                   ),
                 ),
