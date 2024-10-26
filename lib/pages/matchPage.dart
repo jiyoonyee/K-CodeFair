@@ -1,5 +1,6 @@
 // lib/match_page.dart
 import 'package:flutter/material.dart';
+import './matchInputPage.dart';
 
 class MatchPage extends StatelessWidget {
   @override
@@ -50,7 +51,10 @@ class MatchPage extends StatelessWidget {
                             children: [
                               InkWell(
                                 onTap: () {
-                                  print("버튼 클릭");
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => Matchinputpage()),
+                                  );
                                 },
                                 child: Container(
                                   decoration: BoxDecoration(
@@ -61,7 +65,10 @@ class MatchPage extends StatelessWidget {
                               ),
                               InkWell(
                                   onTap: () {
-                                    print("버튼 클릭");
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => Matchinputpage()),
+                                    );
                                   },
                                   child: Container(
                                     decoration: BoxDecoration(
@@ -72,7 +79,10 @@ class MatchPage extends StatelessWidget {
                               ),
                               InkWell(
                                   onTap: () {
-                                    print("버튼 클릭");
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => Matchinputpage()),
+                                    );
                                   },
                                   child: Container(
                                     decoration: BoxDecoration(
@@ -83,7 +93,10 @@ class MatchPage extends StatelessWidget {
                               ),
                               InkWell(
                                   onTap: () {
-                                    print("버튼 클릭");
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => Matchinputpage()),
+                                    );
                                   },
                                   child: Container(
                                     decoration: BoxDecoration(
@@ -106,7 +119,10 @@ class MatchPage extends StatelessWidget {
                 flex: 1,
                 child: InkWell(
                     onTap: () {
-                      print("버튼 클릭");
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Matchinputpage()),
+                      );
                     },
                     child: Container(
                       width: double.infinity,

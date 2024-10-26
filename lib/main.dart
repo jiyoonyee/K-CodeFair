@@ -29,57 +29,43 @@ class MyHomePage extends StatelessWidget {
           children: [
             Expanded(
               flex: 3,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.grey,
-                  minimumSize: Size(double.infinity, 0),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                ),
-                onPressed: () {
-                  // Navigator를 통해 matchPage로 이동
-
-                },
-                child: Text(
-                  "자원 봉사자 \n매칭하기",
-                  style: TextStyle(color: Colors.white, fontSize: 50),
-                  textAlign: TextAlign.center,
-                ),
+              child:InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => MatchPage()),
+                    );
+                  },
+                  child: Container(
+                    width: double.infinity,
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                        color: Color(0xff7ED950),
+                        borderRadius: BorderRadius.circular(20)
+                    ),
+                    child: Image.asset("assets/images/matchButton.png"),)
               ),
             ),
 
-            InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => MatchPage()),
-                  );
-                },
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Color(0xff7ED950),
-                      borderRadius: BorderRadius.circular(20)
-                  ),
-                  child: Image.asset("assets/images/matchButton.png"),)
-            ),
+
             SizedBox(height: 40),
             Expanded(
               flex: 3,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.grey,
-                  minimumSize: Size(double.infinity, 0),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                ),
-                onPressed: () {},
-                child: Text(
-                  "자원봉사\n시작하기",
-                  style: TextStyle(color: Colors.white, fontSize: 50),
-                  textAlign: TextAlign.center,
-                ),
+              child:InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => MatchPage()),
+                    );
+                  },
+                  child: Container(
+                    width: double.infinity,
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                        color: Color(0xff7ED950),
+                        borderRadius: BorderRadius.circular(20)
+                    ),
+                    child: Image.asset("assets/images/voulenteerButton.png"),)
               ),
             ),
             SizedBox(height: 40),
